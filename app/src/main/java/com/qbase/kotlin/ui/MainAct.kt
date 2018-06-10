@@ -12,6 +12,7 @@ import com.qbase.kotlin.ui.request.RequestAct
 import com.qbase.kotlin.ui.test.TestAct
 import kotlinx.android.synthetic.main.act_main.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
+import kotlin.properties.Delegates
 
 class MainAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +44,5 @@ class MainAct : AppCompatActivity() {
         method.onClick {
             startActivity(Intent(this@MainAct, MethodAct::class.java))
         }
-
     }
 }
