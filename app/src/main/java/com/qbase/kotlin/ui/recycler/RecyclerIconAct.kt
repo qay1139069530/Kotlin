@@ -9,6 +9,7 @@ import com.qbase.kotlin.bean.weather.zipcode.ForecastImg
 import com.qbase.kotlin.bean.weather.zipcode.ForecastImgList
 import com.qbase.kotlin.requeest.RequestForecastImgDomain
 import com.qbase.kotlin.ui.recycler.adapter.RecyclerImgAdapter
+import com.qbase.kotlin.ui.recycler.adapter.RecyclerImgAdapterlam
 import kotlinx.android.synthetic.main.act_josn.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.toast
@@ -49,6 +50,15 @@ class RecyclerIconAct : AppCompatActivity(){
 
             })
         }
+
+
+        with(mRecyclerView) {
+            layoutManager = LinearLayoutManager(context)
+            //adapter = RecyclerImgAdapterlam(data){forecastImg -> toast(forecastImg.description) }
+
+            adapter = RecyclerImgAdapterlam(data){toast(it.description)}
+        }
+
 
 
 //        forecastList.adapter = ForecastListAdapter(result,
