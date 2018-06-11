@@ -47,6 +47,11 @@ class TestAct : AppCompatActivity() {
         //val textTextView = TextView(this@TestAct)
         //val textTextView = TextView(_this)
 
+
+        val list = listOf(7, 2, 3, 4, 5, 6)
+        val a = list.maxBy { it<5 }//a : 2 返回最大符合函数的值，比对的结果：0，1，1，1，0，0，所以取值第一个最大的 1值，即列表第二个值
+        val c = list.maxBy { it>3 }//c : 3 返回最大符合函数的值，比对的结果：1，0，0，1，1，1，所以取值第一个最大的 0值，即列表第1个值
+        val b = list.minBy { it<5 }//b : 7 返回最大符合函数的值，比对的结果：0，1，1，1，0，0，所以取值第一个最大的 0值，即列表第1个值
     }
 
     fun add(a: Int, b: Int) = a + b

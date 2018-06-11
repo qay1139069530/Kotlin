@@ -2,7 +2,9 @@ package com.qbase.kotlin.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.annotation.IntegerRes
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import com.qbase.kotlin.R
 import com.qbase.kotlin.ui.data.DataAct
 import com.qbase.kotlin.ui.data.JosnAct
@@ -42,7 +44,9 @@ class MainAct : AppCompatActivity() {
         }
 
         method.onClick {
+
             startActivity(Intent(this@MainAct, MethodAct::class.java))
+
         }
     }
 }
