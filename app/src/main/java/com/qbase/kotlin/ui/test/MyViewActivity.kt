@@ -3,7 +3,9 @@ package com.kotlin.kotlinapplication
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.qbase.kotlin.R
 import org.jetbrains.anko.*
+import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class MyViewActivity : AppCompatActivity() {
 
